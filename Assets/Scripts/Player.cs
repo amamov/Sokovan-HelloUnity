@@ -7,6 +7,8 @@ public class Player : MonoBehaviour
     public float speed = 10f;
     private Rigidbody playerRigidbody;
 
+    public GameManager GameManager;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,11 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Debug.Log("Hello Unity");
+
+        if (GameManager.isGameOver)
+        {
+            return;
+        }
 
         // User Input
         float inputX = Input.GetAxis("Horizontal");
