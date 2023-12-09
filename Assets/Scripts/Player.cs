@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        // 퍼블릭인 경우 드레그앤드롭으로 해당 객체의 RigidBody 컴포넌트를 가져오는 것과 같다.
         playerRigidbody = GetComponent<Rigidbody>(); // Generic
 
     }
